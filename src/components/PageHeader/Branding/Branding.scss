@@ -1,0 +1,17 @@
+.PageHeaderBranding {
+    display: flex;
+
+    h1, h2 {
+        margin: 0;
+    }
+
+    &__photo {
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &__name-title {
+        margin-left: 1rem;
+    }
+}

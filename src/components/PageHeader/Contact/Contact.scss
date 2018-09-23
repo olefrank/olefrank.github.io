@@ -1,0 +1,32 @@
+@import 'src/styling/colors.scss';
+
+.PageHeaderContact {
+    & > * {
+      $size: 2rem;
+        width: $size !important;
+        height: $size !important;
+        transition: transform 80ms ease-out;
+
+        &:not(:first-child) {
+          margin-left: .5rem;
+        }
+    
+        &:hover {
+          transform: scale(1.5);
+          cursor: pointer;
+        }
+    
+        &[class*=facebook] {
+          color: $color__brands--facebook;
+        }
+        &[class*=linkedin] {
+          color: $color__brands--linkedin;
+        }
+        &[class*=github] {
+          color: $color__brands--github;
+        }
+        &[class*=skype] {
+          color: $color__brands--skype;
+        }
+      }
+}
