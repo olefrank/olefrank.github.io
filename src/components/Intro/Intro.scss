@@ -1,0 +1,20 @@
+@import '../../styling/utils.scss';
+
+.Intro {
+  @extend .page-padding;
+
+  display: flex;
+  font-style: italic;
+
+  &__summary-author {
+    @extend .hidden;
+  }
+
+  &__portrait {
+      @extend .curved-shadow;
+      
+      &-img {
+        height: 14rem;
+      }
+  }
+}
