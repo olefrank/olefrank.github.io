@@ -1,3 +1,7 @@
+@import '../../styling/utils.scss';
+
 .App {
-  
+  &__keywords {
+    @extend .page-padding;
+  }
 }

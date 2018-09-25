@@ -1,6 +1,5 @@
 import React from 'react';
-import Keyword from '../Keyword/Keyword';
-import './ExperienceItem.css';
+import Keywords from '../Keywords/Keywords';
 
 const ExperienceItem = ({ data }) => (
 	<div className="ExperienceItem">
@@ -9,7 +8,7 @@ const ExperienceItem = ({ data }) => (
 			<span className="ExperienceItem__company">{` @ ${data.company}`}</span>
 		</h3>
 		<p className="ExperienceItem__description">{data.description}</p>
-		<ul className="ExperienceItem__keywords">{data.keywords && data.keywords.map((keyword, i) => <Keyword key={i} data={keyword} />)}</ul>
+		<Keywords data={data.keywords} />
 	</div>
 );
 export default ExperienceItem;
