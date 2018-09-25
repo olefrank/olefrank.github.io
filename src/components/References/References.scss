@@ -1,5 +1,5 @@
-@import '../../styling/utils.scss';
+@import '../../styling/spacing.scss';
 
 .References {
-  @extend .page-padding;
+  @extend .padding__section--bottom;
 }

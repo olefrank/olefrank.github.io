@@ -1,7 +1,7 @@
-@import '../../styling/utils.scss';
+@import '../../styling/spacing.scss';
 
 .PageHeader {
-  @extend .page-padding;
+  @extend .padding__section--top;
 
   display: flex;
   justify-content: space-between;

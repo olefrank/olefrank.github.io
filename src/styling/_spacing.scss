@@ -1,0 +1,29 @@
+@import 'breakpoints.scss';
+
+// spacing
+$spacing__section--hori: 7rem;
+$spacing__section--vert: 4rem;
+
+
+
+// util spacing classes
+.padding { 
+  padding-top: $spacing__section--vert; 
+  padding-bottom: $spacing__section--vert; 
+  padding-left: $spacing__section--hori; 
+  padding-right: $spacing__section--hori;
+}
+
+.padding__section--top {
+  @extend .padding;
+  padding-bottom: $spacing__section--vert/2;
+}
+.padding__section--bottom {
+  @extend .padding;
+  padding-top: $spacing__section--vert/2;
+}
+.padding__section--middle {
+  @extend .padding;
+  padding-top: $spacing__section--vert/2;
+  padding-bottom: $spacing__section--vert/2;
+}
