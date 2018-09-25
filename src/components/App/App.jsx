@@ -5,7 +5,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import PageHeader from 'components/PageHeader/PageHeader';
 import Intro from 'components/Intro/Intro';
 import Keywords from 'components/Keywords/Keywords';
-import Experience from 'components/Experience/Experience';
+import Experiences from 'components/Experiences/Experiences';
 import experiences from 'data/experiences';
 import educations from 'data/educations';
 import skills from 'data/skills';
@@ -20,10 +20,10 @@ class App extends Component {
 			<div className="App">
 				<PageHeader />
 				<Intro />
-				<Experience title="Experience" data={experiences} />
-				<Experience title="Education" data={educations} />
+				<Experiences title="Experience" data={experiences} />
+				<Experiences title="Education" data={educations} />
 				<div className="App__keywords">
-				<Keywords title="Skills" data={skills} />
+					<Keywords title="Skills" data={skills} />
 				</div>
 			</div>
 		);
