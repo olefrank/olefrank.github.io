@@ -6,9 +6,11 @@ import PageHeader from 'components/PageHeader/PageHeader';
 import Intro from 'components/Intro/Intro';
 import Keywords from 'components/Keywords/Keywords';
 import Experiences from 'components/Experiences/Experiences';
+import References from 'components/References/References';
 import experiences from 'data/experiences';
 import educations from 'data/educations';
 import skills from 'data/skills';
+import references from 'data/references';
 
 import './App.css';
 
@@ -25,6 +27,7 @@ class App extends Component {
 				<div className="App__keywords">
 					<Keywords title="Skills" data={skills} />
 				</div>
+				<References title="References" data={references} />
 			</div>
 		);
 	}
