@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import '../../node_modules/modularscale-sass/stylesheets/modularscale';
+
+$modularscale: (
+  base: 1.3em 1em,
+  ratio: 1.125
+);
+
+h1 { font-size: ms(5); }
+h2 { font-size: ms(4); }
+h3 { font-size: ms(3); }
+h4 { font-size: ms(2); }
+h5 { font-size: ms(1); }
+h6 { font-size: ms(0); }
