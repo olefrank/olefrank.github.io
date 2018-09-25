@@ -1,29 +1,48 @@
 @import 'breakpoints.scss';
 
 // spacing
-$spacing__section--hori: 7rem;
-$spacing__section--vert: 4rem;
+$spacing__hori: 2rem;
+$spacing__hori--sm: 7rem;
+$spacing__vert: 2rem;
+$spacing__vert--sm: 4rem;
 
 
 
 // util spacing classes
 .padding { 
-  padding-top: $spacing__section--vert; 
-  padding-bottom: $spacing__section--vert; 
-  padding-left: $spacing__section--hori; 
-  padding-right: $spacing__section--hori;
+  padding-top: $spacing__vert; 
+  padding-bottom: $spacing__vert; 
+  padding-left: $spacing__hori;
+  padding-right: $spacing__hori;
+  @include mq('sm') {
+    padding-top: $spacing__vert--sm; 
+    padding-bottom: $spacing__vert--sm; 
+    padding-left: $spacing__hori--sm;
+    padding-right: $spacing__hori--sm;
+  }
 }
 
 .padding__section--top {
   @extend .padding;
-  padding-bottom: $spacing__section--vert/2;
+  padding-bottom: $spacing__vert;
+  @include mq('sm') {
+    padding-bottom: $spacing__vert--sm/2;
+  }
 }
 .padding__section--bottom {
   @extend .padding;
-  padding-top: $spacing__section--vert/2;
+  padding-top: $spacing__vert;
+  @include mq('sm') {
+    padding-top: $spacing__vert--sm/2;
+  }
 }
 .padding__section--middle {
   @extend .padding;
-  padding-top: $spacing__section--vert/2;
-  padding-bottom: $spacing__section--vert/2;
+  padding-top: $spacing__vert;
+  padding-bottom: $spacing__vert;
+
+  @include mq('sm') {
+    padding-top: $spacing__vert--sm/2;
+    padding-bottom: $spacing__vert--sm/2;
+  }
 }
