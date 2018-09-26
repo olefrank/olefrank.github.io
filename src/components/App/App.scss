@@ -1,10 +1,11 @@
 @import '../../styling/utils.scss';
 @import '../../styling/spacing.scss';
 @import '../../styling/breakpoints.scss';
+@import '../../styling/colors.scss';
 
 .App {
   @extend .drop-shadow;
-  background-color: white;
+  background-color: $color__background--body;
 
   @include mq('sm') {
     width: $break--lg;
