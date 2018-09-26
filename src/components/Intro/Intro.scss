@@ -1,21 +1,46 @@
 @import '../../styling/utils.scss';
 @import '../../styling/spacing.scss';
+@import '../../styling/typography.scss';
+@import '../../styling/colors.scss';
+@import '../../styling/breakpoints.scss';
 
 .Intro {
   @extend .padding__section--middle;
   
   display: flex;
-  font-style: italic;
 
-  &__summary-author {
+  &__summary {
+    @extend .blockquote;
+    @extend .h5;
+    margin: 0;
+  }
+  
+  &__author {
     @extend .hidden;
   }
-
+  
   &__portrait {
-      @extend .curved-shadow;
-      
-      &-img {
-        height: 14rem;
+    @extend .curved-shadow;
+    display: none;
+    
+    @include mq('sm') {
+      display: block;
+      z-index: 0;
+      transition: transform 100ms ease-out;
+      transform: rotate(2deg);
+  
+      &:hover {
+        transform: rotate(0);
       }
+  
+      &--frame {
+        border: 12px solid $color__background--body;
+        box-shadow: 0 0 1px $color__text--light;
+      }
+      
+      &--img {
+        height: 14rem;
+      }      
+    }
   }
 }
