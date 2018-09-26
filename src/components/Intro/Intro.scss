@@ -26,8 +26,8 @@
     @include mq('sm') {
       display: block;
       z-index: 0;
-      transition: transform 100ms ease-out;
       transform: rotate(2deg);
+      transition: transform 150ms ease-out;
   
       &:hover {
         transform: rotate(0);

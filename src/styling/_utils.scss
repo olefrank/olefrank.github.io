@@ -8,9 +8,16 @@
 // shadow under image
 .curved-shadow { 
   $rotate: 3deg;
-  position: relative; 
+  position: relative;
+  
+  &:hover {
+    &:before, &:after {
+      box-shadow: 0 14px 10px $color__shadow--regular;
+    }
+  }
   
   &:before, &:after {
+    transition: box-shadow 150ms ease-out;
     z-index: -1;
     position: absolute;
     content: "";
@@ -18,9 +25,8 @@
     left: 4px;
     width: 48%;
     top: 80%;
-    max-width:300px;
-    background: #777;
-    box-shadow: 0 20px 10px #777;
+    background: $color__shadow--regular;
+    box-shadow: 0 20px 10px $color__shadow--regular;
     transform: rotate($rotate * -1);
   }
   &:after {
@@ -31,7 +37,7 @@
 }
 
 .drop-shadow {
-  box-shadow: 0 0 10px #aaa;
+  box-shadow: 0 10px $color__shadow--light;
 }
 
 .no-spacing {
