@@ -1,15 +1,24 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Contact.css';
 
 const PageHeaderContact = () => (
-    <div className="PageHeaderContact">
-<FontAwesomeIcon icon={['fab','facebook']} />
-      <FontAwesomeIcon icon={['fab','linkedin']} />
-      <FontAwesomeIcon icon={['fab','github']} />
-      <FontAwesomeIcon icon={['fab','skype']} />
-      <FontAwesomeIcon icon="envelope" />
-   
-    </div>
-)
+	<div className="PageHeaderContact">
+		<a href="https://www.facebook.com/ole.f.jensen.7" target="_blank" rel="noopener noreferrer">
+			<FontAwesomeIcon icon={['fab', 'facebook']} />
+		</a>
+		<a href="https://www.linkedin.com/in/olefrankjensen/" target="_blank" rel="noopener noreferrer">
+			<FontAwesomeIcon icon={['fab', 'linkedin']} />
+		</a>
+		<a href="https://github.com/olefrank" target="_blank" rel="noopener noreferrer">
+			<FontAwesomeIcon icon={['fab', 'github']} />
+		</a>
+		<a href="skype:olefrankjensen" target="_blank" rel="noopener noreferrer">
+			<FontAwesomeIcon icon={['fab', 'skype']} />
+		</a>
+		<a href="mailto:olefrankjensen@gmail.com" target="_blank" rel="noopener noreferrer">
+			<FontAwesomeIcon icon="envelope" />
+		</a>
+	</div>
+);
 export default PageHeaderContact;
