@@ -2,22 +2,26 @@
 @import 'src/styling/breakpoints.scss';
 
 .PageHeaderBranding {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
     margin-top: 1rem;
 
     @include mq('sm') {
         text-align: start;
+        width: auto;
         margin-top: 0;
     }
 
     &__photo {
-        display: none;
-        
+        border-radius: 50%;
+        $img-size: 3.5rem;
+        width: $img-size;
+        height: $img-size;
+
         @include mq('sm') {
-            border-radius: 50%;
-            $img-size: 3.5rem;
-            width: $img-size;
-            height: $img-size;
+            display: none;
         }
     }
 

@@ -3,7 +3,7 @@
 
 .PageHeaderContact {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   order: -1;
   width: 100%;
 
@@ -16,8 +16,8 @@
   & > * {
     transition: transform 80ms ease-out;
 
-    $size: 1.6rem;
-    $size--sm: .2;
+    $size: 1.4rem;
+    $size--sm: .4;
     width: $size !important;
     height: $size !important;
     
