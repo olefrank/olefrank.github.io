@@ -3,10 +3,8 @@ import Keywords from '../../Keywords/Keywords';
 
 const Experience = ({ data }) => (
 	<div className="Experience">
-		<h3>
-			<span className="Experience__title">{data.title}</span>
-			<span className="Experience__company">{` @ ${data.company}`}</span>
-		</h3>
+		<h4 className="Experience__title">{data.title}</h4>
+		<h5 className="Experience__company">{data.company}</h5>
 		<p className="Experience__description">{data.description}</p>
 		<Keywords data={data.keywords} />
 	</div>

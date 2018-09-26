@@ -1,8 +1,8 @@
-@import 'src/styling/spacing.scss';
+@import 'src/styling/typography.scss';
 
 .Keywords {
   &__title {
-    @extend .spacing__section-title; 
+    @extend .typography__section--title; 
   }
 
   &__list {

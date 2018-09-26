@@ -1,9 +1,10 @@
 @import '../../styling/spacing.scss';
+@import '../../styling/typography.scss';
 
 .Experiences {
   @extend .padding__section;
 
   &__title {
-    @extend .spacing__section-title; 
+    @extend .typography__section--title; 
   }
 }

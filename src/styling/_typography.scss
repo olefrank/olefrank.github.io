@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import '../../node_modules/modularscale-sass/stylesheets/modularscale';
 @import './spacing.scss';
+@import './breakpoints.scss';
 
 $font-base-size: 1em;
 $font-base-size--sm: 1.2em;
 
 $modularscale: (
-  base: $font-base-size $font-base-size--sm,
+  base: $font-base-size,
   ratio: 1.2
 );
 
@@ -19,9 +20,46 @@ h6, .h6 {
   @extend .no-spacing;
 }
 
-h1, .h1 { font-size: ms(5); }
-h2, .h2 { font-size: ms(4); }
-h3, .h3 { font-size: ms(3); }
-h4, .h4 { font-size: ms(2); }
-h5, .h5 { font-size: ms(1); }
-h6, .h6 { font-size: ms(0); }
+h1, .h1 {
+  font-size: ms(4);
+  @include mq('sm') {
+    font-size: ms(5);
+  }
+}
+h2, .h2 {
+  font-size: ms(3);
+  @include mq('sm') {
+    font-size: ms(4);
+  }
+}
+h3, .h3 {
+  font-size: ms(2);
+  @include mq('sm') {
+    font-size: ms(3);
+  }
+}
+h4, .h4 {
+  font-size: ms(1);
+  @include mq('sm') {
+    font-size: ms(2);
+  }
+}
+h5, .h5 {
+  font-size: ms(0);
+  @include mq('sm') {
+    font-size: ms(1);
+  }
+}
+h6, .h6 {
+  font-size: ms(-1);
+  @include mq('sm') {
+    font-size: ms(0);
+  }
+}
+
+.typography__section--title {
+  @extend .h2;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}

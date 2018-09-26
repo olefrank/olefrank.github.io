@@ -9,7 +9,7 @@ const PageHeaderBranding = () => (
 			alt="Portrait of Ole Frank Jensen, Senior Web Developer"
 		/>
 		<div className="PageHeaderBranding__name-title">
-			<h1 className="PageHeaderBranding__name ">Ole Frank Jensen</h1>
+			<h2 className="PageHeaderBranding__name ">Ole Frank Jensen</h2>
 			<h4 className="PageHeaderBranding__title">Senior Web Developer</h4>
 		</div>
 	</div>
