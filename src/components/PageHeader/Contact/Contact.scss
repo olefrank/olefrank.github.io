@@ -15,14 +15,14 @@
 
   & > * {
     &:not(:first-child) {
-      margin-left: .5rem;
+      margin-left: 1rem;
     }
 
     svg {
       transition: transform 80ms ease-out;
   
       $size: 1.4rem;
-      $size--sm: .4;
+      $size--sm: .6;
       width: $size !important;
       height: $size !important;
       
