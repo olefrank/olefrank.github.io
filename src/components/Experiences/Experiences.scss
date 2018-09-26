@@ -2,4 +2,8 @@
 
 .Experiences {
   @extend .padding__section;
+
+  &__title {
+    @extend .spacing__section-title; 
+  }
 }

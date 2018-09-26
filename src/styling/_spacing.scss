@@ -69,3 +69,12 @@ $section-margin__vert--sm: 2rem;
     );
   }
 }
+
+.no-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+.spacing__section-title {
+  margin-bottom: 2rem;
+}

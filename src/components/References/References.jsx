@@ -5,7 +5,7 @@ const References = ({ title, data }) => {
 	console.log(data);
 	return (
 		<div className="References">
-			<h3>{title}</h3>
+			<h3 className="References__title">{title}</h3>
 			{data &&
 				data.map((ref, i) => (
 					<React.Fragment key={i}>

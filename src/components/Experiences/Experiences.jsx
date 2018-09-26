@@ -4,7 +4,7 @@ import './Experiences.css';
 
 const Experiences = ({ title, data }) => (
 	<div className="Experiences">
-		<h3>{title}</h3>
+		<h3 className="Experiences__title">{title}</h3>
 		{data && data.map((exp, i) => <Experience key={i} data={exp} />)}
 	</div>
 );

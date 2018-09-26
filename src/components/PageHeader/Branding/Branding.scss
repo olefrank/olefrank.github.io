@@ -1,4 +1,4 @@
-@import 'src/styling/utils.scss';
+@import 'src/styling/spacing.scss';
 @import 'src/styling/breakpoints.scss';
 
 .PageHeaderBranding {
@@ -23,9 +23,5 @@
         @include mq('sm') {
             display: none;
         }
-    }
-
-    &__name, &__title {
-        @extend .no-spacing;
-    }   
+    }  
 }

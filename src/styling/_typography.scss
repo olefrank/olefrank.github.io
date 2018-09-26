@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import '../../node_modules/modularscale-sass/stylesheets/modularscale';
+@import './spacing.scss';
 
 $font-base-size: 1em;
 $font-base-size--sm: 1.2em;
@@ -8,6 +9,15 @@ $modularscale: (
   base: $font-base-size $font-base-size--sm,
   ratio: 1.2
 );
+
+h1, .h1, 
+h2, .h2, 
+h3, .h3, 
+h4, .h4, 
+h5, .h5, 
+h6, .h6 {
+  @extend .no-spacing;
+}
 
 h1, .h1 { font-size: ms(5); }
 h2, .h2 { font-size: ms(4); }
