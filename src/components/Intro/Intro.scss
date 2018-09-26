@@ -25,6 +25,7 @@
     
     @include mq('sm') {
       display: block;
+      margin-left: 1rem;
       z-index: 0;
       transform: rotate(2deg);
       transition: transform 150ms ease-out;
