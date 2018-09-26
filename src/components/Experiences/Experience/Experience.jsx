@@ -1,5 +1,6 @@
 import React from 'react';
 import Keywords from '../../Keywords/Keywords';
+import './Experience.css';
 
 const Experience = ({ data }) => (
 	<div className="Experience">

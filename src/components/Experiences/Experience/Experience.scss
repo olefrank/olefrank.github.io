@@ -1,0 +1,15 @@
+@import 'src/styling/typography.scss';
+
+.Experience {
+  &__title {
+    @extend .typography__experience--title; 
+  }
+
+  &__company {
+    @extend .typography__experience--company;
+  }
+  
+  &__description {
+    @extend .typography__experience--text;
+  }
+}

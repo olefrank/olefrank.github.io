@@ -2,6 +2,7 @@
 @import '../../node_modules/modularscale-sass/stylesheets/modularscale';
 @import './spacing.scss';
 @import './breakpoints.scss';
+@import './colors.scss';
 
 $font-base-size: 1em;
 $font-base-size--sm: 1.2em;
@@ -26,30 +27,35 @@ h1, .h1 {
     font-size: ms(5);
   }
 }
+
 h2, .h2 {
   font-size: ms(3);
   @include mq('sm') {
     font-size: ms(4);
   }
 }
+
 h3, .h3 {
   font-size: ms(2);
   @include mq('sm') {
     font-size: ms(3);
   }
 }
+
 h4, .h4 {
   font-size: ms(1);
   @include mq('sm') {
     font-size: ms(2);
   }
 }
+
 h5, .h5 {
   font-size: ms(0);
   @include mq('sm') {
     font-size: ms(1);
   }
 }
+
 h6, .h6 {
   font-size: ms(-1);
   @include mq('sm') {
@@ -60,6 +66,20 @@ h6, .h6 {
 .typography__section--title {
   @extend .h2;
   margin-top: 2rem;
-  margin-bottom: 2rem;
   text-decoration: underline;
+}
+
+.typography__experience--title {
+  @extend .h4;
+  margin-top: 1rem;
+}
+
+.typography__experience--company {
+  @extend .h5;  
+  color: $color__text--light;
+}
+
+.typography__experience--text {
+  margin-top: .5rem;
+  margin-bottom: 0;
 }
