@@ -5,6 +5,9 @@
 html {
   background-color: $color__background--html;
   font-size: $font-base-size;
+  @include mq('sm') {
+    font-size: $font-base-size--sm;
+  }
 
 }
 
