@@ -1,10 +1,16 @@
 @import '../../styling/spacing.scss';
+@import '../../styling/breakpoints.scss';
 
 .PageHeader {
   @extend .padding__section--top;
 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   border-bottom: 1px solid #ccc;
+
+  @include mq('sm') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

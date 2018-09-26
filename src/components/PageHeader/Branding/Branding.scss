@@ -1,17 +1,27 @@
-.PageHeaderBranding {
-    display: flex;
+@import 'src/styling/utils.scss';
+@import 'src/styling/breakpoints.scss';
 
-    h1, h2 {
-        margin: 0;
+.PageHeaderBranding {
+    text-align: center;
+    margin-top: 1rem;
+
+    @include mq('sm') {
+        text-align: start;
+        margin-top: 0;
     }
 
     &__photo {
-        border-radius: 50%;
-        width: 2.5rem;
-        height: 2.5rem;
+        display: none;
+        
+        @include mq('sm') {
+            border-radius: 50%;
+            $img-size: 3.5rem;
+            width: $img-size;
+            height: $img-size;
+        }
     }
 
-    &__name-title {
-        margin-left: 1rem;
-    }
+    &__name, &__title {
+        @extend .no-spacing;
+    }   
 }

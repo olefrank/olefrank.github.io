@@ -1,32 +1,52 @@
 @import 'src/styling/colors.scss';
+@import 'src/styling/breakpoints.scss';
 
 .PageHeaderContact {
-    & > * {
-      $size: 2rem;
-        width: $size !important;
-        height: $size !important;
-        transition: transform 80ms ease-out;
+  display: flex;
+  justify-content: space-evenly;
+  order: -1;
+  width: 100%;
 
-        &:not(:first-child) {
-          margin-left: .5rem;
-        }
+  @include mq('sm') {
+    order: 0;
+    width: auto;
+    display: block;
+  }
+
+  & > * {
+    transition: transform 80ms ease-out;
+
+    $size: 1.6rem;
+    $size--sm: .2;
+    width: $size !important;
+    height: $size !important;
     
-        &:hover {
-          transform: scale(1.5);
-          cursor: pointer;
-        }
-    
-        &[class*=facebook] {
-          color: $color__brands--facebook;
-        }
-        &[class*=linkedin] {
-          color: $color__brands--linkedin;
-        }
-        &[class*=github] {
-          color: $color__brands--github;
-        }
-        &[class*=skype] {
-          color: $color__brands--skype;
-        }
-      }
+    @include mq('sm') {
+      width: $size + $size--sm !important;
+      height: $size + $size--sm !important;
+    }
+
+
+    &:not(:first-child) {
+      margin-left: .5rem;
+    }
+
+    &:hover {
+      transform: scale(1.5);
+      cursor: pointer;
+    }
+
+    &[class*=facebook] {
+      color: $color__brands--facebook;
+    }
+    &[class*=linkedin] {
+      color: $color__brands--linkedin;
+    }
+    &[class*=github] {
+      color: $color__brands--github;
+    }
+    &[class*=skype] {
+      color: $color__brands--skype;
+    }
+  }
 }
