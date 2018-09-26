@@ -22,13 +22,15 @@ class App extends Component {
 			<div className="App">
 				<PageHeader />
 				<Intro />
-				<Experiences title="Experience" data={experiences} />
+				<section className="App__experiences">
+					<Experiences title="Experience" data={experiences} />
+				</section>
 				<Experiences title="Education" data={educations} />
-				<div className="App__keywords">
+				<section className="App__keywords">
 					<Keywords title="Skills" data={skills} />
-				</div>
+				</section>
 				<References title="References" data={references} />
-				<footer className="App__footer"></footer>
+				<footer className="App__footer" />
 			</div>
 		);
 	}

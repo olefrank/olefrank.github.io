@@ -12,6 +12,12 @@
     margin: $app-margin__vert / 2 auto;
   }
   
+  &__experiences {
+    @include mq('sm') {
+      margin-top: -7rem;
+    }
+  }
+
   &__keywords {
     @extend .padding__section;
   }
