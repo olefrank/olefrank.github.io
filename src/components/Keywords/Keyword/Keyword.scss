@@ -1,10 +1,21 @@
 @import '../../../styling/utils.scss';
+@import '../../../styling/breakpoints.scss';
 
 .Keyword {
-  display: inline;
-  &:after {
-      content: '//';
-      margin-left: .5rem;
-      margin-right: .5rem;
+  border-radius: 1rem;
+  display: inline-block;
+  padding: .3rem .6rem;
+  background-color: #666;
+  color: white;
+  line-height: 1;
+  vertical-align: middle;
+  margin-bottom: .5rem;
+  font-size: 80%;
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  @include mq('sm') {
+    font-size: 100%;
   }
 }

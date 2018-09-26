@@ -25,8 +25,10 @@ class App extends Component {
 				<section className="App__experiences">
 					<Experiences title="Experience" data={experiences} />
 				</section>
-				<Experiences title="Education" data={educations} />
-				<section className="App__keywords">
+				<section className="App__educations">
+					<Experiences title="Education" data={educations} />
+				</section>
+				<section className="App__skills">
 					<Keywords title="Skills" data={skills} />
 				</section>
 				<References title="References" data={references} />

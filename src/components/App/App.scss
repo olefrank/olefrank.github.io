@@ -16,10 +16,23 @@
     @include mq('sm') {
       margin-top: -7rem;
     }
+    .Keyword {
+      background-color: $color__section--experience;
+    }
   }
 
-  &__keywords {
+  &__educations {
+    .Keyword {
+      background-color: $color__section--education;
+    }
+  }
+
+  &__skills {
     @extend .padding__section;
+    
+    .Keyword {
+      background-color: $color__section--skills;
+    }
   }
 
   &__footer {

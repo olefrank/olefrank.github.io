@@ -1,3 +1,11 @@
+// color scheme
+$color-1: #112F49;
+$color-2: #1C7257;
+$color-3: #E1BD1E;
+$color-4: #F57815;
+$color-5: #EF5A1E;
+
+
 // shadow
 $color__shadow--light: #aaa;
 $color__shadow--regular: #777;
@@ -19,3 +27,9 @@ $color__brands--facebook: #4367B2;
 $color__brands--skype: #1FB7EC;
 $color__brands--linkedin: #0077B5;
 $color__brands--github: #323131;
+
+
+// sections
+$color__section--experience: $color-1;
+$color__section--education: $color-2;
+$color__section--skills: $color-5;
