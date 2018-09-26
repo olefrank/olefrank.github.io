@@ -9,7 +9,7 @@ const References = ({ title, data }) => {
 			{data &&
 				data.map((ref, i) => (
 					<React.Fragment key={i}>
-						<blockquote>
+						<blockquote className="References__blockquote">
 							<p>{ref.quote}</p>
 						</blockquote>
 						<cite>{ref.author}</cite>

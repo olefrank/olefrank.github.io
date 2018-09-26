@@ -1,5 +1,10 @@
 @import '../../styling/spacing.scss';
+@import '../../styling/utils.scss';
 
 .References {
   @extend .padding__section--bottom;
+
+  &__blockquote {
+    @extend .blockquote;
+  }
 }
