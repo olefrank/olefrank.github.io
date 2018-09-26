@@ -2,6 +2,10 @@
 
 html {
   background-color: #dedede;
+  font-size: $font-base-size;
+  @include mq('sm') {
+    font-size: $font-base-size--sm;
+  }
 }
 
 body {
