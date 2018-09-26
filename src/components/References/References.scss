@@ -2,7 +2,7 @@
 @import '../../styling/utils.scss';
 
 .References {
-  @extend .padding__section--bottom;
+  @extend .padding__section;
 
   &__blockquote {
     @extend .blockquote;

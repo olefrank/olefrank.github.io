@@ -2,7 +2,7 @@
 @import '../../styling/breakpoints.scss';
 
 .PageHeader {
-  @extend .padding__section--top;
+  @extend .padding__section--header;
 
   display: flex;
   flex-direction: column;

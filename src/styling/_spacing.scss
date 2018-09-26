@@ -1,48 +1,71 @@
 @import 'breakpoints.scss';
 
-// spacing
-$spacing__hori: 2rem;
-$spacing__hori--sm: 7rem;
-$spacing__vert: 2rem;
-$spacing__vert--sm: 4rem;
+// the outermost component (aka. 'page')
+$app-margin__hori: 2rem;
+$app-margin__vert: 2rem;
+$app-margin__hori--sm: 7rem;
+$app-margin__vert--sm: 4rem;
 
+// the 'sections' of the page (ex. 'Intro')
+$section-margin__vert: 2rem;
+$section-margin__vert--sm: 2rem;
 
-
-// util spacing classes
-.padding { 
-  padding-top: $spacing__vert; 
-  padding-bottom: $spacing__vert; 
-  padding-left: $spacing__hori;
-  padding-right: $spacing__hori;
-  @include mq('sm') {
-    padding-top: $spacing__vert--sm; 
-    padding-bottom: $spacing__vert--sm; 
-    padding-left: $spacing__hori--sm;
-    padding-right: $spacing__hori--sm;
+// used for generation 'padding' code
+@mixin padding($values...) {    
+  @each $var in $values {
+      padding: #{$var};
   }
 }
 
-.padding__section--top {
-  @extend .padding;
-  padding-bottom: $spacing__vert;
-  @include mq('sm') {
-    padding-bottom: $spacing__vert--sm/2;
-  }
-}
-.padding__section--bottom {
-  @extend .padding;
-  padding-top: $spacing__vert;
-  @include mq('sm') {
-    padding-top: $spacing__vert--sm/2;
-  }
-}
-.padding__section--middle {
-  @extend .padding;
-  padding-top: $spacing__vert;
-  padding-bottom: $spacing__vert;
+// upper-most section ('header')
+.padding__section--header {
+  @include padding(
+    $app-margin__vert 
+    $app-margin__hori
+  );
 
   @include mq('sm') {
-    padding-top: $spacing__vert--sm/2;
-    padding-bottom: $spacing__vert--sm/2;
+    @include padding (
+      $app-margin__vert--sm 
+      $app-margin__hori--sm 
+      $section-margin__vert--sm 
+      $app-margin__hori--sm
+    );
+  }
+}
+
+// lower-most section ('footer')
+.padding__section--footer {
+  @include padding(
+    $app-margin__vert 
+    $app-margin__hori
+  );
+
+  @include mq('sm') {
+    @include padding (
+      $section-margin__vert--sm 
+      $app-margin__hori--sm 
+      $app-margin__vert--sm 
+      $app-margin__hori--sm
+    );
+  }
+}
+
+// middle section
+.padding__section {
+  @include padding(
+    $app-margin__vert 
+    $app-margin__hori 
+    0 
+    $app-margin__hori 
+  );
+
+  @include mq('sm') {
+    @include padding (
+      $section-margin__vert--sm 
+      $app-margin__hori--sm 
+      0 
+      $app-margin__hori--sm
+    );
   }
 }

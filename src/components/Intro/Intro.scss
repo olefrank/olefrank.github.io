@@ -5,7 +5,7 @@
 @import '../../styling/breakpoints.scss';
 
 .Intro {
-  @extend .padding__section--middle;
+  @extend .padding__section;
   
   display: flex;
 

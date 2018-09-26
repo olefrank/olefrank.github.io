@@ -28,6 +28,7 @@ class App extends Component {
 					<Keywords title="Skills" data={skills} />
 				</div>
 				<References title="References" data={references} />
+				<footer className="App__footer"></footer>
 			</div>
 		);
 	}

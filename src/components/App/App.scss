@@ -9,10 +9,14 @@
 
   @include mq('sm') {
     width: $break--lg;
-    margin: $spacing__vert/2 auto;
+    margin: $app-margin__vert / 2 auto;
   }
   
   &__keywords {
-    @extend .padding__section--middle;
+    @extend .padding__section;
+  }
+
+  &__footer {
+    @extend .padding__section--footer;
   }
 }
