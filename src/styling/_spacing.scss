@@ -18,7 +18,7 @@ $section-margin__vert--sm: 2rem;
 }
 
 // upper-most section ('header')
-.padding__section--header {
+.padding__header {
   @include padding(
     $app-margin__vert 
     $app-margin__hori
@@ -34,8 +34,24 @@ $section-margin__vert--sm: 2rem;
   }
 }
 
+.padding__header--collapsed {
+  // @include padding(
+  //   $app-margin__vert 
+  //   $app-margin__hori
+  // );
+
+  @include mq('sm') {
+    @include padding (
+      0 
+      $app-margin__hori--sm 
+      // $section-margin__vert--sm 
+      // $app-margin__hori--sm
+    );
+  }
+}
+
 // lower-most section ('footer')
-.padding__section--footer {
+.padding__footer {
   @include padding(
     $app-margin__vert 
     $app-margin__hori

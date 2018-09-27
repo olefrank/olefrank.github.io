@@ -17,10 +17,52 @@ import './App.css';
 library.add(fab, faEnvelope);
 
 class App extends Component {
+	state = {
+		headerCollapsed: false,
+		scrollY: 0,
+		scrollRAFF: false,
+	};
+
+	componentDidMount() {
+		window.addEventListener('scroll', this.handleScroll, false);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll);
+	}
+
+	handleScroll = e => {
+		this.setState({ scrollY: window.scrollY });
+		this.requestRAFF();
+	};
+
+	updateOnScroll = () => {
+		const { scrollY } = this.state;
+
+		this.setState({ scrollRAFF: false }, () => {
+			let headerCollapsed = false;
+
+			if (!headerCollapsed && scrollY >= 16) {
+				headerCollapsed = true;
+			} else if (headerCollapsed && scrollY < 16) {
+				headerCollapsed = false;
+			}
+			this.setState({ headerCollapsed });
+		});
+	};
+
+	requestRAFF = () => {
+		if (!this.state.scrollRAFF) {
+			requestAnimationFrame(this.updateOnScroll);
+		}
+		this.setState({ scrollRAFF: true });
+	};
+
 	render() {
+		const { headerCollapsed } = this.state;
 		return (
-			<div className="App">
-				<PageHeader />
+			<div className={`App ${headerCollapsed ? 'push-content' : ''}`}>
+				<PageHeader headerCollapsed={headerCollapsed} />
 				<Intro />
 				<section className="App__experiences">
 					<Experiences title="Experience" data={experiences} />

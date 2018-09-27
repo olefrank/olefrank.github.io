@@ -13,6 +13,10 @@
     display: block;
   }
 
+  &.headerCollapsed {
+    
+  }
+
   & > * {
     &:not(:first-child) {
       margin-left: 1rem;

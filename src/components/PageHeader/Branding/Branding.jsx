@@ -1,8 +1,8 @@
 import React from 'react';
 import './Branding.css';
 
-const PageHeaderBranding = () => (
-	<div className="PageHeaderBranding">
+const PageHeaderBranding = ({className}) => (
+	<div className={`PageHeaderBranding ${className}`}>
 		<a href="ole-frank-jensen-portrait.jpg" target="_blank">
 			<img
 				className="PageHeaderBranding__photo"

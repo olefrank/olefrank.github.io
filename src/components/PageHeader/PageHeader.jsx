@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PageHeaderBranding from './Branding/Branding';
 import PageHeaderContact from './Contact/Contact';
 import './PageHeader.css';
 
+class PageHeader extends Component {
+	render() {
+		const { headerCollapsed } = this.props;
 
-const PageHeader = () => (
-  <header className="PageHeader">
-    <PageHeaderBranding />
-    <PageHeaderContact />
-  </header>
-)
+		return (
+			<header className={`PageHeader ${headerCollapsed ? 'headerCollapsed' : ''}`}>
+				<PageHeaderBranding className={`${headerCollapsed ? 'headerCollapsed' : ''}`} />
+				<PageHeaderContact className={`${headerCollapsed ? 'headerCollapsed' : ''}`} />
+			</header>
+		);
+	}
+}
 export default PageHeader;

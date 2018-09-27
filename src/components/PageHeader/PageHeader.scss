@@ -1,16 +1,37 @@
 @import '../../styling/spacing.scss';
 @import '../../styling/breakpoints.scss';
+@import '../../styling/colors.scss';
 
 .PageHeader {
-  @extend .padding__section--header;
+  @extend .padding__header;
+  position: absolute;
+  top: 0;
+  background-color: $color__background--body;
+  z-index: 9999;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $color__border--light;
+  // max-height: 210px;
+  transition: padding 200ms ease-out;
+  width: $break--lg;
 
   @include mq('sm') {
     flex-direction: row;
     justify-content: space-between;
+  }
+  
+  &.headerCollapsed {
+    @extend .padding__header--collapsed;
+    
+    position: fixed;
+    box-shadow: 0 0 10px $color__shadow--light;
+    
+    @include mq('sm') {
+      // height: 60px;
+    }
+    
   }
 }

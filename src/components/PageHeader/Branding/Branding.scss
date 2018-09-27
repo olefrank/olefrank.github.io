@@ -2,6 +2,8 @@
 @import 'src/styling/breakpoints.scss';
 
 .PageHeaderBranding {
+    $this: &;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -23,5 +25,24 @@
         @include mq('sm') {
             display: none;
         }
-    }  
+    }
+
+    &__name {
+        transition: transform 350ms ease-out;
+        transform: translate(0);
+    }
+
+    &__title {
+        transition: opacity 200ms;
+        opacity: 1;
+    }
+
+    &.headerCollapsed {
+        #{$this}__name {
+            transform: translate(0, 16px);
+        }
+        #{$this}__title {
+            opacity: 0;
+        }
+    }
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Contact.css';
 
-const PageHeaderContact = () => (
-	<div className="PageHeaderContact">
+const PageHeaderContact = ({className}) => (
+	<div className={`PageHeaderContact ${className}`}>
 		<a href="https://www.facebook.com/ole.f.jensen.7" target="_blank" rel="noopener noreferrer">
 			<FontAwesomeIcon icon={['fab', 'facebook']} />
 		</a>

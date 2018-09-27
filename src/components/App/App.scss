@@ -6,10 +6,12 @@
 .App {
   @extend .drop-shadow;
   background-color: $color__background--body;
-
+  position: relative;
+  padding-top: 210px; // same as PageHeader height
+  
   @include mq('sm') {
     width: $break--lg;
-    margin: $app-margin__vert / 2 auto;
+    margin: 1rem auto;
   }
   
   &__experiences {
@@ -36,6 +38,6 @@
   }
 
   &__footer {
-    @extend .padding__section--footer;
+    @extend .padding__footer;
   }
 }
