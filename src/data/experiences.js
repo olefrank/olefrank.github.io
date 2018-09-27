@@ -5,7 +5,7 @@ export default [
         "dateFrom": new Date("2017-05-01"),
         "dateTo": new Date(),
         "keywords": ["react", "redux", "node.js", "typescript", "scss", "jest", "cypress"],
-        "description": "Startup doing software for selling/managing service contracts for new and used cars. I joined the startup 6 months in as a Full Stack Dev. with focus on the front end but also taking part in developing our RESTful API, agile workflows, testing procedure etc."
+        "description": "Startup doing software for selling/managing service contracts for new and used cars. I joined the startup 6 months in as a Full Stack Dev with focus on the front end but also taking part in developing our RESTful API, agile workflows, testing procedure etc."
       },
       {
         "title": "Frontend / Node.js developer",

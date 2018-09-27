@@ -2,7 +2,6 @@ import React from 'react';
 import './References.css';
 
 const References = ({ title, data }) => {
-	console.log(data);
 	return (
 		<div className="References">
 			<h3 className="References__title">{title}</h3>
