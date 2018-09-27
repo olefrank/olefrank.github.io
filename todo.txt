@@ -3,3 +3,5 @@
 Put colors in SCSS map
 
 Use Placeholder instead of classes (@extend)
+
+<section> instead of <div>

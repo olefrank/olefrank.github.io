@@ -1,6 +1,7 @@
 @import 'src/styling/typography.scss';
 
 .Keywords {
+  margin-top: .5rem;
   &__title {
     @extend .typography__section--title; 
   }
