@@ -1,7 +1,7 @@
 export default [
 	{
 		title: 'Computer Science AP',
-		company: 'Business Academy Aarhus, Denmark',
+		company: 'Business Academy Aarhus',
 		dateFrom: new Date('2011-08-01'),
 		dateTo: new Date('2014-01-01'),
 		keywords: [
@@ -35,7 +35,7 @@ export default [
 	},
 	{
 		title: 'Jazz Trumpet / Music Teacher',
-		company: 'Royal Academy of Music (DK) / Koninklijk Conservatorium Den Haag (NL)',
+		company: 'Royal Academy of Music',
 		dateFrom: new Date('2003-08-01'),
 		dateTo: new Date('2007-07-01'),
 		keywords: [
