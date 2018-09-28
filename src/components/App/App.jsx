@@ -11,53 +11,40 @@ import experiences from 'data/experiences';
 import educations from 'data/educations';
 import skills from 'data/skills';
 import references from 'data/references';
+import throttle from 'lodash.throttle';
 
 import './App.css';
 
 library.add(fab, faEnvelope);
 
 class App extends Component {
-	state = {
-		headerCollapsed: false,
-		scrollY: 0,
-		scrollRAFF: false,
-	};
+	constructor(props) {
+		super(props)
+		this.state = {
+			headerCollapsed: false,
+		}
+		this.throttleScroll = throttle(this.handleScroll, 10);
+	}
 
 	componentDidMount() {
-		window.addEventListener('scroll', this.handleScroll, false);
+		window.addEventListener('scroll', this.throttleScroll, false);
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener('scroll', this.handleScroll);
+		window.removeEventListener('scroll', this.throttleScroll);
 	}
 
 	handleScroll = e => {
-		this.setState({ scrollY: window.scrollY });
-		this.requestRAFF();
-	};
+		let headerCollapsed = false;
 
-	updateOnScroll = () => {
-		const { scrollY } = this.state;
-
-		this.setState({ scrollRAFF: false }, () => {
-			let headerCollapsed = false;
-
-			if (!headerCollapsed && scrollY >= 16) {
+			if (!headerCollapsed && window.scrollY >= 16) {
 				headerCollapsed = true;
-			} else if (headerCollapsed && scrollY < 16) {
+			} else if (headerCollapsed && window.scrollY < 16) {
 				headerCollapsed = false;
 			}
 			this.setState({ headerCollapsed });
-		});
 	};
-
-	requestRAFF = () => {
-		if (!this.state.scrollRAFF) {
-			requestAnimationFrame(this.updateOnScroll);
-		}
-		this.setState({ scrollRAFF: true });
-	};
-
+	
 	render() {
 		const { headerCollapsed } = this.state;
 		return (
