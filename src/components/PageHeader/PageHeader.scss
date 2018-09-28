@@ -5,29 +5,32 @@
 
 .PageHeader {
   @extend .padding__header;
-  position: absolute;
-  top: 0;
-  background-color: $color__background--body;
+  position: fixed;
   z-index: 9999;
+  top: 0;
+  border-bottom: 1px solid $color__border--light;
+  
+  background-color: $color__background--body;
   width: 100%;
-
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid $color__border--light;
-  width: $break--lg;
-  transition: all $transition__time--regular ease-out;
-
+  transition: padding $transition__time--regular ease-out;
+  
   @include mq('sm') {
+    position: absolute;
+    width: $break--lg;
     flex-direction: row;
-    justify-content: space-between;
   }
   
   &.headerCollapsed {
-    @extend .padding__header--collapsed;
-    
-    position: fixed;
     box-shadow: 0 0 10px $color__shadow--light;
+    padding: .5rem $app-margin__hori;
     
+    @include mq('sm') {
+      position: fixed;
+      padding: .5rem $app-margin__hori--sm;
+    }    
   }
 }

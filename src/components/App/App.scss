@@ -7,9 +7,10 @@
   @extend .drop-shadow;
   background-color: $color__background--body;
   position: relative;
-  padding-top: 210px; // same as PageHeader height
-  
+  padding-top: 170px;
+
   @include mq('sm') {
+    padding-top: 210px;
     width: $break--lg;
     margin: 1rem auto;
   }

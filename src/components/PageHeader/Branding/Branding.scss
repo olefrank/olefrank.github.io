@@ -11,7 +11,7 @@
     align-items: center;
     width: 100%;
     margin-top: 1rem;
-
+    
     @include mq('sm') {
         text-align: start;
         width: auto;
@@ -23,6 +23,7 @@
         $img-size: 3.5rem;
         width: $img-size;
         height: $img-size;
+        transition: all $transition__time--regular ease-out;
 
         @include mq('sm') {
             display: none;
@@ -30,24 +31,40 @@
     }
 
     &__name {
-        transition: all $transition__time--regular ease-out;
-        transform: translate(0);
         line-height: 1;
-    }
-
-    &__title {
-        transition: opacity $transition__time--fast linear;
-        opacity: 1;
+        transition: font-size $transition__time--regular ease-out;
     }
 
     &.headerCollapsed {
+        margin-top: 0;
+        justify-content: flex-start;
+        #{$this}__photo {
+            $img-size: 2rem;
+            width: $img-size;
+            height: $img-size;
+    
+            @include mq('sm') {
+                display: none;
+            }
+        }
+        #{$this}__name-title {
+            margin-left: 1rem;
+        }
         #{$this}__name {
-            @extend .h4;  
-            transform: translate(0, 14px);
+            font-size: 1em;
         }
         #{$this}__title {
-            @extend .h6;
-            opacity: 0;
+            font-size: .8rem;
+            display: none;
+        }
+        @include mq('sm') {
+            #{$this}__name {
+                font-size: 1.4rem;
+            }
+            #{$this}__title {
+                font-size: 1.2rem;
+                display: none;
+            }
         }
     }
 }
