@@ -1,7 +1,13 @@
 @import 'src/styling/colors.scss';
 @import 'src/styling/breakpoints.scss';
+@import 'src/styling/animations.scss';
 
 .PageHeaderContact {
+  $this: &;
+  $icon-size--collapsed: 1.2rem;
+  $icon-size: 1.4rem;
+  $icon-size--sm: 1.8rem;
+
   display: flex;
   justify-content: space-evenly;
   order: -1;
@@ -12,46 +18,52 @@
     width: auto;
     display: block;
   }
-
-  &.headerCollapsed {
-    
-  }
-
-  & > * {
+  
+  &__link {
     &:not(:first-child) {
       margin-left: 1rem;
     }
-
-    svg {
-      transition: transform 80ms ease-out;
-  
-      $size: 1.4rem;
-      $size--sm: .6;
-      width: $size !important;
-      height: $size !important;
-      
-      @include mq('sm') {
-        width: $size + $size--sm !important;
-        height: $size + $size--sm !important;
-      }
-  
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.5);
-      }
-  
-      &[data-icon*=facebook] {
-        color: $color__brands--facebook;
-      }
-      &[data-icon*=linkedin] {
-        color: $color__brands--linkedin;
-      }
-      &[data-icon*=github] {
-        color: $color__brands--github;
-      }
-      &[data-icon*=skype] {
-        color: $color__brands--skype;
-      }
   }
+
+  &__icon {
+    transition: all $transition__time--fast ease-out;
+
+    width: $icon-size !important;
+    height: $icon-size !important;
+    
+    @include mq('sm') {
+      width: $icon-size--sm !important;
+      height: $icon-size--sm !important;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.5);
+    }
+
+    &[data-icon*=facebook] {
+      color: $color__brands--facebook;
+    }
+    &[data-icon*=linkedin] {
+      color: $color__brands--linkedin;
+    }
+    &[data-icon*=github] {
+      color: $color__brands--github;
+    }
+    &[data-icon*=skype] {
+      color: $color__brands--skype;
+    }
+  }
+
+  &.headerCollapsed {
+    #{$this}__icon {
+      width: $icon-size--collapsed !important;
+      height: $icon-size--collapsed !important;    
+    }
+    #{$this}__link {
+      &:not(:first-child) {
+        margin-left: .5rem;
+      }
+    }
   }
 }

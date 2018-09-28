@@ -1,5 +1,7 @@
 @import 'src/styling/spacing.scss';
 @import 'src/styling/breakpoints.scss';
+@import 'src/styling/typography.scss';
+@import 'src/styling/animations.scss';
 
 .PageHeaderBranding {
     $this: &;
@@ -28,20 +30,23 @@
     }
 
     &__name {
-        transition: transform 350ms ease-out;
+        transition: all $transition__time--regular ease-out;
         transform: translate(0);
+        line-height: 1;
     }
 
     &__title {
-        transition: opacity 200ms;
+        transition: opacity $transition__time--fast linear;
         opacity: 1;
     }
 
     &.headerCollapsed {
         #{$this}__name {
-            transform: translate(0, 16px);
+            @extend .h4;  
+            transform: translate(0, 14px);
         }
         #{$this}__title {
+            @extend .h6;
             opacity: 0;
         }
     }

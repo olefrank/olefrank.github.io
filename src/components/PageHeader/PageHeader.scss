@@ -1,6 +1,7 @@
 @import '../../styling/spacing.scss';
 @import '../../styling/breakpoints.scss';
 @import '../../styling/colors.scss';
+@import '../../styling/animations.scss';
 
 .PageHeader {
   @extend .padding__header;
@@ -14,9 +15,8 @@
   flex-direction: column;
   align-items: center;
   border-bottom: 1px solid $color__border--light;
-  // max-height: 210px;
-  transition: padding 200ms ease-out;
   width: $break--lg;
+  transition: all $transition__time--regular ease-out;
 
   @include mq('sm') {
     flex-direction: row;
@@ -28,10 +28,6 @@
     
     position: fixed;
     box-shadow: 0 0 10px $color__shadow--light;
-    
-    @include mq('sm') {
-      // height: 60px;
-    }
     
   }
 }
