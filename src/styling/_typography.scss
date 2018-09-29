@@ -19,6 +19,7 @@ h4, .h4,
 h5, .h5, 
 h6, .h6 {
   @extend .no-spacing;
+  font-weight: 100;
 }
 
 h1, .h1 {
@@ -66,7 +67,7 @@ h6, .h6 {
 .typography__section--title {
   @extend .h2;
   margin-top: 2rem;
-  text-decoration: underline;
+  font-weight: 700;
 }
 
 .typography__experience--title {

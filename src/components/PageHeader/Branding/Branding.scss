@@ -32,7 +32,12 @@
 
     &__name {
         line-height: 1;
+        font-weight: 700;
         transition: font-size $transition__time--regular ease-out;
+    }
+
+    &__title {
+        color: #333;
     }
 
     &.headerCollapsed {
