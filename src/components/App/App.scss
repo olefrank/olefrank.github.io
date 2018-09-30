@@ -30,6 +30,12 @@
     }
   }
 
+  &__volounteering {
+    .Keyword {
+      background-color: $color__section--volounteering;
+    }
+  }
+
   &__skills {
     @extend .padding__section;
     

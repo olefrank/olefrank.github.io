@@ -11,6 +11,7 @@ import experiences from 'data/experiences';
 import educations from 'data/educations';
 import skills from 'data/skills';
 import references from 'data/references';
+import volounteering from 'data/volounteering';
 import throttle from 'lodash.throttle';
 
 import './App.css';
@@ -56,6 +57,9 @@ class App extends Component {
 				</section>
 				<section className="App__educations">
 					<Experiences title="Education" data={educations} />
+				</section>
+				<section className="App__volounteering">
+					<Experiences title="Volounteering" data={volounteering} />
 				</section>
 				<section className="App__skills">
 					<Keywords title="Skills" data={skills} />
