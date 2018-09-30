@@ -2,3 +2,9 @@ TODO:
 Put colors in SCSS map
 Use Placeholder instead of classes (@extend)
 Animate photo when sceolling to top (desktop)
+
+INSPIRATION:
+New timeline/design: https://codyhouse.co/demo/vertical-timeline/index.html#0
+
+TEXT
+new sections: volounteering, courses

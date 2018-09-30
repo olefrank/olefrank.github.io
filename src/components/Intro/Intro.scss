@@ -8,11 +8,23 @@
   @extend .padding__section;
   
   display: flex;
+  flex-wrap: wrap;
 
-  &__summary {
+  &__byline {
+    flex-basis: 100%;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+
+  &__quote {
     @extend .blockquote;
     @extend .h5;
     margin: 0;
+    flex: 1;
+    
+    @include mq('sm') {
+      margin-top: 1rem;
+    }
   }
   
   &__author {
