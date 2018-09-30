@@ -35,6 +35,11 @@
       background-color: $color__section--volounteering;
     }
   }
+  &__courses {
+    .Keyword {
+      background-color: $color__section--courses;
+    }
+  }
 
   &__skills {
     @extend .padding__section;
