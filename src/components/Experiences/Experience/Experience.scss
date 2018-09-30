@@ -8,6 +8,12 @@
   &__company {
     @extend .typography__experience--company;
   }
+
+  &__date {
+    margin-left: .5rem;
+    color: $color__text--light;
+    font-style: italic;
+  }
   
   &__description {
     @extend .typography__experience--text;

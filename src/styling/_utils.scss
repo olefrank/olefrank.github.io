@@ -1,5 +1,6 @@
 @import 'colors.scss';
 @import 'animations.scss';
+@import 'breakpoints.scss';
 
 // hide stuff...
 .hidden {
@@ -56,5 +57,60 @@
   }
   p {
     display: inline;
+  }
+}
+
+.timeline {
+
+  @include mq('sm') {
+    $spacing: 22px;
+    $unit: 4px;
+    $line: $unit / 4;
+  
+    $date: $unit * 20;
+    $dot: $unit * 2.5;
+    
+    border-left: $line solid $color__border--light2;
+    border-bottom-right-radius: $unit;
+    border-top-right-radius: $unit;    
+    padding: 10px $spacing;
+    margin-left: 4rem;
+    
+    .event {
+      padding-bottom: ($spacing * 0.5);
+      margin-bottom: $spacing;  
+      position: relative;
+  
+      &:last-of-type { 
+        padding-bottom: 0;
+        margin-bottom: 0; 
+        border: none;      
+      }
+  
+      &:before, &:after {
+        position: absolute;
+        display: block;
+        top: 0;
+      }
+  
+      &:before {
+        left: $date * -1;
+        top: 5px; 
+        content: attr(data-date);
+        text-align: right;
+        color: $color__text--light;
+      }
+  
+      &:after {
+        box-shadow: 0 0 0 $line $color__border--light2;        
+        left: ($spacing + $line + ($dot * 0.5)) * -1;        
+        background-color: white;
+        border-radius: 50%;
+        height: $dot;
+        width: $dot;
+        content: "";
+        top: 13px;
+      }
+    }
   }
 }
