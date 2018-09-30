@@ -9,7 +9,7 @@ export default [
       },
       {
         "title": "Frontend / Node.js developer",
-        "company": "Danmarks Radio (DR)",
+        "company": "Danmarks Radio",
         "dateFrom": new Date("2015-09-01"),
         "dateTo": new Date("2017-05-01"),
         "keywords": ["node.js","express","backbone","drupal"],
