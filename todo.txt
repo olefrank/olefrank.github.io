@@ -1,4 +1,5 @@
 TODO:
+Test header + date in Experience
 Put colors in SCSS map
 Use Placeholder instead of classes (@extend)
 Animate photo when sceolling to top (desktop)

@@ -10,9 +10,11 @@
   }
 
   &__date {
-    margin-left: .5rem;
+    margin-top: 0;
+    margin-bottom: 0;
     color: $color__text--light;
     font-style: italic;
+    font-size: .8rem;
   }
   
   &__description {

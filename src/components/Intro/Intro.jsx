@@ -1,15 +1,17 @@
 import React from 'react';
-import differenceInCalendarMonths from 'date-fns/difference_in_calendar_years'
+import differenceInCalendarYears from 'date-fns/difference_in_calendar_years';
 import './Intro.css';
 
 const Intro = () => {
-	const age = differenceInCalendarMonths(Date(),new Date('1978-07-17'))
-	const experienceYears = differenceInCalendarMonths(new Date(),new Date('2011-08-01')) % 12
+	const age = differenceInCalendarYears(Date(), new Date('1978-07-17'));
+
+	const experienceYears = differenceInCalendarYears(new Date(), new Date('2011-08-01')) % 12;
 	return (
 		<div className="Intro">
 			<h5 className="Intro__byline">
-				{experienceYears}{experienceYears > 0 ? '+' : ''} years full time experience, AP Computer Science with top grades, experienced instructor/teacher, loves to
-				hike, kayak and play jazz trumpet, {age} years old, Copenhagen based.
+				{experienceYears}
+				{experienceYears > 0 ? '+' : ''} years full time experience, AP Computer Science with top grades, experienced
+				instructor/teacher, loves to hike, kayak and play jazz trumpet, {age} years old, Copenhagen based.
 			</h5>
 
 			<blockquote className="Intro__quote">
