@@ -57,18 +57,5 @@
 
   &.headerCollapsed {
     display: none;
-
-    @include mq('sm') {
-      display: block;
-      #{$this}__icon {
-        width: $icon-size--collapsed !important;
-        height: $icon-size--collapsed !important;    
-      }
-      #{$this}__link {
-        &:not(:first-child) {
-          margin-left: .5rem;
-        }
-      } 
-    }
   }
 }

@@ -19,7 +19,7 @@
   transition: padding $transition__time--regular ease-out;
   
   @include mq('sm') {
-    position: absolute;
+    position: static;
     width: $break--lg;
     flex-direction: row;
   }
@@ -27,6 +27,7 @@
   &.headerCollapsed {
     box-shadow: 0 0 10px $color__shadow--light;
     padding: .5rem $app-margin__hori;
+    flex-direction: row;
     
     @include mq('sm') {
       position: fixed;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PageHeaderBranding from './Branding/Branding';
 import PageHeaderContact from './Contact/Contact';
+import PageHeaderMenu from './Menu/Menu';
 import './PageHeader.css';
 
 class PageHeader extends Component {
@@ -11,6 +12,7 @@ class PageHeader extends Component {
 			<header className={`PageHeader ${headerCollapsed ? 'headerCollapsed' : ''}`}>
 				<PageHeaderBranding className={`${headerCollapsed ? 'headerCollapsed' : ''}`} />
 				<PageHeaderContact className={`${headerCollapsed ? 'headerCollapsed' : ''}`} />
+				<PageHeaderMenu className={`${headerCollapsed ? 'headerCollapsed' : ''}`} />
 			</header>
 		);
 	}

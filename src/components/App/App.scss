@@ -7,14 +7,12 @@
   @extend .drop-shadow;
   background-color: $color__background--body;
   position: relative;
-  padding-top: 162px;
 
   @include mq('sm') {
-    padding-top: 192px;
     width: $break--lg;
     margin: 1rem auto;
   }
-  
+
   &__experiences {
     @include mq('sm') {
       margin-top: -7rem;

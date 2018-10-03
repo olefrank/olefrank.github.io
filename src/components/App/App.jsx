@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import PageHeader from 'components/PageHeader/PageHeader';
 import Intro from 'components/Intro/Intro';
 import Keywords from 'components/Keywords/Keywords';
@@ -17,7 +17,7 @@ import throttle from 'lodash.throttle';
 
 import './App.css';
 
-library.add(fab, faEnvelope);
+library.add(fab, faEnvelope, faBars);
 
 class App extends Component {
 	constructor(props) {
@@ -53,22 +53,24 @@ class App extends Component {
 			<div className={`App ${headerCollapsed ? 'push-content' : ''}`}>
 				<PageHeader headerCollapsed={headerCollapsed} />
 				<Intro />
-				<section className="App__experiences">
+				<section id="experience" className="App__experiences">
 					<Experiences title="Experience" data={experiences} />
 				</section>
-				<section className="App__educations">
+				<section id="education" className="App__educations">
 					<Experiences title="Education" data={educations} />
 				</section>
-				<section className="App__volounteering">
+				<section id="volounteering" className="App__volounteering">
 					<Experiences title="Volounteering" data={volounteering} />
 				</section>
-				<section className="App__courses">
+				<section id="courses" className="App__courses">
 				<Experiences title="Courses" data={courses} />
 				</section>
-				<section className="App__skills">
+				<section id="skills" className="App__skills">
 					<Keywords title="Skills" data={skills} />
 				</section>
+				<section id="references">
 				<References title="References" data={references} />
+				</section>
 				<footer className="App__footer" />
 			</div>
 		);

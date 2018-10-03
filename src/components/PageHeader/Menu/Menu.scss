@@ -1,0 +1,35 @@
+@import 'src/styling/colors.scss';
+@import 'src/styling/breakpoints.scss';
+@import 'src/styling/animations.scss';
+@import 'src/styling/typography.scss';
+
+.PageHeaderMenu {
+  cursor: pointer;
+  display: none;
+  position: relative;
+
+  &.headerCollapsed {
+    display: block;
+  }
+
+  &__list {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    text-align: right;
+    padding: .5rem;
+    background-color: $color__background--menu;
+    width: 12rem;
+    border: 1px solid $color__border--light;
+    box-shadow: 0 0 10px #ccc;
+
+    &-item {
+      @extend .h5;
+      &:hover {
+        background-color: #ccc;
+      }
+
+    }
+  }
+  
+}
