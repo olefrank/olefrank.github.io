@@ -9,7 +9,7 @@ class PageHeader extends Component {
 		const { headerCollapsed } = this.props;
 
 		return (
-			<header className={`PageHeader ${headerCollapsed ? 'headerCollapsed' : ''}`}>
+			<header className={`PageHeader ${headerCollapsed ? 'headerCollapsed' : ''}`} data-e2e="PageHeader">
 				<PageHeaderBranding className={`${headerCollapsed ? 'headerCollapsed' : ''}`} />
 				<PageHeaderContact className={`${headerCollapsed ? 'headerCollapsed' : ''}`} />
 				<PageHeaderMenu className={`${headerCollapsed ? 'headerCollapsed' : ''}`} />
