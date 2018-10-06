@@ -19,7 +19,7 @@
   transition: padding $transition__time--regular ease-out;
   
   @include mq('sm') {
-    position: static;
+    position: absolute;
     width: $break--lg;
     flex-direction: row;
   }

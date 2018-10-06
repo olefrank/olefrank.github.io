@@ -3,7 +3,7 @@ import Keywords from '../../Keywords/Keywords';
 import differenceInCalendarMonths from 'date-fns/difference_in_calendar_months';
 import format from 'date-fns/format';
 import './Experience.css';
-import { isSameMonth, isSameYear } from 'date-fns';
+import { isSameMonth } from 'date-fns';
 
 const Experience = ({ data }) => {
 	const dates = getDatesString(data.dateFrom, data.dateTo);

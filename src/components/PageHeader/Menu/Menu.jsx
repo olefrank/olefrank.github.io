@@ -25,7 +25,7 @@ class PageHeaderMenu extends Component {
 		);
 	}
 	toggleMenu = () => {
-		this.setState({menuOpen: !this.state.menuOpen}, () => console.log('this.state.menuOpen',this.state.menuOpen))
+		this.setState({menuOpen: !this.state.menuOpen})
 	}
 }
 

@@ -7,6 +7,7 @@
   @extend .drop-shadow;
   background-color: $color__background--body;
   position: relative;
+  padding-top: 162px;
 
   @include mq('sm') {
     width: $break--lg;

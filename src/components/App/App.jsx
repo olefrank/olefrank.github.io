@@ -21,10 +21,10 @@ library.add(fab, faEnvelope, faBars);
 
 class App extends Component {
 	constructor(props) {
-		super(props)
+		super(props);
 		this.state = {
 			headerCollapsed: false,
-		}
+		};
 		this.throttleScroll = throttle(this.handleScroll, 10);
 	}
 
@@ -37,20 +37,20 @@ class App extends Component {
 	}
 
 	handleScroll = e => {
-		let headerCollapsed = false;
+		const { headerCollapsed } = this.state;
 
-			if (!headerCollapsed && window.scrollY >= 16) {
-				headerCollapsed = true;
-			} else if (headerCollapsed && window.scrollY < 16) {
-				headerCollapsed = false;
-			}
-			this.setState({ headerCollapsed });
+		if (!headerCollapsed && window.scrollY >= 16) {
+			this.setState({ headerCollapsed: true });
+		} else if (headerCollapsed && window.scrollY < 16) {
+			this.setState({ headerCollapsed: false });
+		}
 	};
-	
+
 	render() {
 		const { headerCollapsed } = this.state;
+
 		return (
-			<div className={`App ${headerCollapsed ? 'push-content' : ''}`}>
+			<div className="App">
 				<PageHeader headerCollapsed={headerCollapsed} />
 				<Intro />
 				<section id="experience" className="App__experiences">
@@ -63,13 +63,13 @@ class App extends Component {
 					<Experiences title="Volounteering" data={volounteering} />
 				</section>
 				<section id="courses" className="App__courses">
-				<Experiences title="Courses" data={courses} />
+					<Experiences title="Courses" data={courses} />
 				</section>
 				<section id="skills" className="App__skills">
 					<Keywords title="Skills" data={skills} />
 				</section>
 				<section id="references">
-				<References title="References" data={references} />
+					<References title="References" data={references} />
 				</section>
 				<footer className="App__footer" />
 			</div>
