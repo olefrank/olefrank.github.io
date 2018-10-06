@@ -27,6 +27,9 @@
   },
   "devDependencies": {
     "modularscale-sass": "^3.0.5",
-    "node-sass-chokidar": "^1.3.3"
+    "node-sass-chokidar": "^1.3.3",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "react-test-renderer": "^16.5.2"
   }
 }

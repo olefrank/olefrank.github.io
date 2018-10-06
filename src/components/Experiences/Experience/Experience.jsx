@@ -7,45 +7,45 @@ import { isSameMonth } from 'date-fns';
 
 const Experience = ({ data }) => {
 	const dates = getDatesString(data.dateFrom, data.dateTo);
-	const distance = getDateDistanceString(data.dateFrom, data.dateTo);
+	const distance = `(${getDateDistanceString(data.dateFrom, data.dateTo)})`;
 
 	return (
-		<li className="Experience event" data-date={data.dateFrom.getFullYear()}>
+		<li className="Experience event" data-date={data.dateFrom && data.dateFrom.getFullYear()}>
 			<h4 className="Experience__title">{data.title}</h4>
 			<h5 className="Experience__company">{data.company}</h5>
-			<p className="Experience__date">{`${dates} ${distance ? distance : ''}`}</p>
+			<p className="Experience__date">{`${dates} ${distance}`}</p>
 			<p className="Experience__description">{data.description}</p>
 			<Keywords data={data.keywords} />
 		</li>
 	);
 };
 
-const getDatesString = (dateFrom, dateTo) => {
+export const getDatesString = (dateFrom, dateTo) => {
 	if (isSameMonth(dateFrom, dateTo)) {
 		return format(dateFrom, 'MMM YYYY');
 	}
 	return `${format(dateFrom, 'MMM YYYY')} - ${format(dateTo, 'MMM YYYY')}`;
 };
 
-const getDateDistanceString = (dateFrom, dateTo) => {
+export const getDateDistanceString = (dateFrom, dateTo) => {
 	const diff = differenceInCalendarMonths(dateTo, dateFrom);
 	const years = Math.floor(diff / 12);
 	const months = diff % 12;
 	let result = '';
 	if (!years) {
 		if (!months) {
-			return;
+			return '';
 		} else {
 			result = getTimePlural('month', months);
 		}
 	} else {
 		result = `${getTimePlural('year', years)}${months ? ', ' + getTimePlural('month', months) : ''}`;
 	}
-	return `(${result})`;
+	return `${result}`;
 };
 
-const getTimePlural = (time, value) => {
-	if (!value) {
+export const getTimePlural = (time, value) => {
+	if (value <= 0) {
 		return '';
 	} else if (value === 1) {
 		return `${value} ${time}`;
