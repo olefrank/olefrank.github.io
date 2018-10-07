@@ -11,7 +11,7 @@ const Intro = () => {
 			<h5 className="Intro__byline">
 				{experienceYears}
 				{experienceYears > 0 ? '+' : ''} years full time experience, AP Computer Science with top grades, experienced
-				instructor/teacher, loves to hike, kayak and play jazz trumpet, {age} years old, Copenhagen based.
+				instructor/teacher, loves to hike 🏃, kayak 🚣 and play jazz trumpet 🎺, {age} years old, Copenhagen based 🇩🇰.
 			</h5>
 
 			<blockquote className="Intro__quote">
