@@ -2,7 +2,7 @@
   "name": "curriculum",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://olefrank.github.io",
+  "homepage": "https://olefrank.github.io/curriculum",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
