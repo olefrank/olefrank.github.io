@@ -20,9 +20,13 @@
   
   @include mq('sm') {
     position: absolute;
-    width: $break--lg;
     flex-direction: row;
   }
+
+  @include mq('lg') {
+    width: $break--lg;
+  }
+  
   
   &.headerCollapsed {
     box-shadow: 0 0 10px $color__shadow--light;

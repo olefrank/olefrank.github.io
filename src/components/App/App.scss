@@ -9,7 +9,7 @@
   position: relative;
   padding-top: 162px;
 
-  @include mq('sm') {
+  @include mq('lg') {
     width: $break--lg;
     margin: 1rem auto;
   }
