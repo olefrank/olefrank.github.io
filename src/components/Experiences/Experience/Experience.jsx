@@ -11,7 +11,15 @@ const Experience = ({ data }) => {
 
 	return (
 		<li className="Experience event" data-date={data.dateFrom && data.dateFrom.getFullYear()}>
-			<h4 className="Experience__title">{data.title}</h4>
+			<h4 className="Experience__title">
+				{data.link ? (
+					<a href={data.link} target="_blank">
+						{data.title}
+					</a>
+				) : (
+					data.title
+				)}
+			</h4>
 			<h5 className="Experience__company">{data.company}</h5>
 			<p className="Experience__date">{`${dates} ${distance}`}</p>
 			<p className="Experience__description">{data.description}</p>

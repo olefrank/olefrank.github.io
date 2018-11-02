@@ -5,10 +5,6 @@
 html {
   background-color: $color__background--html;
   font-size: $font-base-size;
-  @include mq('sm') {
-    // font-size: $font-base-size--sm;
-  }
-
 }
 
 body {
@@ -23,6 +19,8 @@ ul {
 }
 
 a {
-  text-decoration: none;
-  color: $color__text--regular
+  &:not(:hover) {
+    text-decoration: none;
+  }
+  color: $color__text--regular;
 }
