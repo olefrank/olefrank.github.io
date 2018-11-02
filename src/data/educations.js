@@ -2,6 +2,7 @@ export default [
 	{
 		title: 'Computer Science AP',
 		company: 'Business Academy Aarhus',
+		link: 'https://www.eaaa.dk/videregaaende-uddannelser/erhvervsakademiuddannelse/datamatiker/',
 		dateFrom: new Date('2011-08-01'),
 		dateTo: new Date('2014-01-01'),
 		keywords: [
@@ -23,6 +24,7 @@ export default [
 	{
 		title: 'MSc. Information Science',
 		company: 'Aarhus University',
+		link: 'http://kandidat.au.dk/en/informationstudies/',
 		dateFrom: new Date('2009-08-01'),
 		dateTo: new Date('2010-08-01'),
 		keywords: [
@@ -36,6 +38,7 @@ export default [
 	{
 		title: 'Jazz Trumpet / Music Teacher',
 		company: 'Royal Academy of Music',
+		link: 'https://www.musikkons.dk/index.php?id=13',
 		dateFrom: new Date('2003-08-01'),
 		dateTo: new Date('2007-07-01'),
 		keywords: [
@@ -52,6 +55,7 @@ export default [
 	{
 		title: 'BA. Musicology',
 		company: 'Aarhus University',
+		link: 'http://bachelor.au.dk/en/musicology/',
 		dateFrom: new Date('1999-08-01'),
 		dateTo: new Date('2003-07-01'),
 		keywords: [
