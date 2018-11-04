@@ -9,7 +9,6 @@
   z-index: 9999;
   top: 0;
   border-bottom: 1px solid $color__border--light;
-  
   background-color: $color__background--body;
   width: 100%;
   display: flex;
@@ -37,5 +36,9 @@
       position: fixed;
       padding: .5rem $app-margin__hori--sm;
     }    
+  }
+
+  @media print {
+    position: absolute; // do not repeat header on every page
   }
 }

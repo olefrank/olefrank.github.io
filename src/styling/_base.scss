@@ -24,3 +24,13 @@ a {
   }
   color: $color__text--regular;
 }
+
+@media print {
+  @page {
+    size: 330mm 427mm;
+    margin: 14mm;
+  }
+  #root {
+    width: 1170px;
+  }
+}
