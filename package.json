@@ -1,5 +1,5 @@
 {
-  "name": "curriculum",
+  "name": "olefrank.github.io",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://olefrank.github.io",
@@ -28,7 +28,7 @@
     "cypress": "cypress open",
     "cypress:all": "cypress run",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "devDependencies": {
     "cypress": "^3.1.0",
