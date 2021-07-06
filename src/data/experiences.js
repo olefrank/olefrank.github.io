@@ -1,5 +1,14 @@
 export default [
 	{
+		title: 'Senior Frontend Developer',
+		company: 'Liva Healthcare',
+		link: 'http://www.livahealthcare.dk',
+		dateFrom: new Date('2019-09-01'),
+		dateTo: new Date(),
+		keywords: ['react', 'redux', 'typescript', 'styled-components', 'jest', 'testing-library'],
+		description: 'Xxx',
+	},
+	{
 		title: 'Senior Web Developer',
 		company: 'OmniCar A/S',
 		link: 'http://www.omnicar.dk',
