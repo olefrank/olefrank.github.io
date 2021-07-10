@@ -1,4 +1,5 @@
 @import '../../styling/spacing.scss';
+@import '../../styling/colors.scss';
 @import '../../styling/typography.scss';
 
 .Experiences {
@@ -6,5 +7,6 @@
 
   &__title {
     @extend .typography__section--title; 
+    color: $color__section--experience;
   }
 }

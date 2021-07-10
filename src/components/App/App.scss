@@ -21,11 +21,17 @@
     .Keyword {
       background-color: $color__section--experience;
     }
+    .Experiences__title {
+      color: $color__section--experience;
+    }
   }
 
   &__educations {
     .Keyword {
       background-color: $color__section--education;
+    }
+    .Experiences__title {
+      color: $color__section--education;
     }
   }
 
@@ -33,19 +39,30 @@
     .Keyword {
       background-color: $color__section--volounteering;
     }
+    .Experiences__title {
+      color: $color__section--volounteering;
+    }
   }
   &__courses {
     .Keyword {
       background-color: $color__section--courses;
     }
+    .Experiences__title {
+      color: $color__section--courses;
+    }
   }
 
   &__skills {
     @extend .padding__section;
-    
-    .Keyword {
-      background-color: $color__section--skills;
+    .Keywords {
+      &__title {
+        color: $color__section--skills;
+      }
+      .Keyword {
+        background-color: $color__section--skills;
+      }
     }
+  
   }
 
   &__footer {

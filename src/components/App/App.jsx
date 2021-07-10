@@ -36,7 +36,7 @@ class App extends Component {
 		window.removeEventListener('scroll', this.throttleScroll);
 	}
 
-	handleScroll = e => {
+	handleScroll = (e) => {
 		const { headerCollapsed } = this.state;
 
 		if (!headerCollapsed && window.scrollY >= 16) {
