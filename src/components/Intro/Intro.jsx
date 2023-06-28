@@ -5,7 +5,7 @@ import './Intro.css';
 const Intro = () => {
 	const age = differenceInCalendarYears(Date(), new Date('1978-07-17'));
 
-	const experienceYears = differenceInCalendarYears(new Date(), new Date('2011-08-01')) % 12;
+	const experienceYears = differenceInCalendarYears(new Date(), new Date('2013-01-01'));
 	return (
 		<div className="Intro">
 			<h5 className="Intro__byline">
